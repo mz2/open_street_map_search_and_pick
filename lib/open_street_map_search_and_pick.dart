@@ -197,7 +197,7 @@ class _OpenStreetMapSearchAndPickState
                       _mapController.center, _mapController.zoom + 1);
                 },
                 child: Icon(
-                widget.zoomInIcon,
+                  widget.zoomInIcon,
                   color: widget.buttonTextColor,
                 ),
               )),
@@ -212,7 +212,7 @@ class _OpenStreetMapSearchAndPickState
                       _mapController.center, _mapController.zoom - 1);
                 },
                 child: Icon(
-                widget.zoomOutIcon,
+                  widget.zoomOutIcon,
                   color: widget.buttonTextColor,
                 ),
               )),
@@ -238,7 +238,7 @@ class _OpenStreetMapSearchAndPickState
                   }
                 },
                 child: Icon(
-                widget.currentLocationIcon ,
+                  widget.currentLocationIcon,
                   color: widget.buttonTextColor,
                 ),
               )),
@@ -396,6 +396,7 @@ class LatLong {
 class PickedData {
   final LatLong latLong;
   final String address;
+  final Map<String, dynamic> osmData;
 
-  PickedData(this.latLong, this.address);
+  PickedData(this.latLong, this.address, this.osmData);
 }
