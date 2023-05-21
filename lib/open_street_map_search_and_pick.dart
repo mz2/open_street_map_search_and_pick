@@ -361,7 +361,7 @@ class _OpenStreetMapSearchAndPickState
     var decodedResponse =
         jsonDecode(utf8.decode(response.bodyBytes)) as Map<dynamic, dynamic>;
     String displayName = decodedResponse['display_name'];
-    return PickedData(center, displayName);
+    return PickedData(center, displayName, decodedResponse);
   }
 }
 
@@ -396,7 +396,7 @@ class LatLong {
 class PickedData {
   final LatLong latLong;
   final String address;
-  final Map<String, dynamic> osmData;
+  final Map<dynamic, dynamic> osmData;
 
   PickedData(this.latLong, this.address, this.osmData);
 }
